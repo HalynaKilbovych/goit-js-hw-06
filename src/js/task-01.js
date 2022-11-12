@@ -1,23 +1,27 @@
-
-// 1. Cтворю змінну для загального списку
-// 2. Cтворю змінну кількості категорій 
-// 3. Вивожу в консоль 
-
 const categoriesList = document.querySelectorAll("li.item");
 
 console.log(`Number of categories: ${categoriesList.length}`);
 
-// Перший список 
-console.log(`Category: ${categoriesList[0].firstElementChild.textContent}`)
 
-console.log(`Elements: ${categoriesList[0].lastElementChild.children.length}`)
+// console.log(`Category: ${categoriesList[0].firstElementChild.textContent}`)
 
-// Другий список 
-console.log(`Category: ${categoriesList[1].firstElementChild.textContent}`)
+// console.log(`Elements: ${categoriesList[0].lastElementChild.children.length}`)
 
-console.log(`Elements: ${categoriesList[1].lastElementChild.children.length}`)
+// console.log(`Category: ${categoriesList[1].firstElementChild.textContent}`)
 
-// Третій список 
-console.log(`Category: ${categoriesList[2].firstElementChild.textContent}`)
+// console.log(`Elements: ${categoriesList[1].lastElementChild.children.length}`)
 
-console.log(`Elements: ${categoriesList[2].lastElementChild.children.length}`)
+// console.log(`Category: ${categoriesList[2].firstElementChild.textContent}`)
+
+// console.log(`Elements: ${categoriesList[2].lastElementChild.children.length}`)
+
+
+categoriesList.forEach( function(category) { 
+    const title = category.firstElementChild;
+
+    console.log (`Category: ${title.textContent}`);
+
+    const element = category.lastElementChild.children; 
+
+    console.log (`Elements: ${element.length}`);
+})
