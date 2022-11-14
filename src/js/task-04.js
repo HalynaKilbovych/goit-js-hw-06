@@ -28,15 +28,17 @@ const counterValue = document.querySelector("#value")
 //     counterValue.textContent = counter.value;
 // }); 
 
+let counter = 0;
 
 function handleBtnDecrement(event) { 
-    event.currentTarget.value -=1;
+    counter -=1;
+    event.currentTarget.value = counter;
     counterValue.textContent = event.currentTarget.value; 
 }
 
 function handleBtnIncrement(event) { 
-    event.currentTarget.value +=1;
-    console.log(counterValue.textContent);
+    counter +=1;
+    event.currentTarget.value = counter;
     counterValue.textContent = event.currentTarget.value; 
 }
 
