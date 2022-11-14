@@ -17,6 +17,7 @@ console.log(`Number of categories: ${categoriesList.length}`);
 
 
 categoriesList.forEach( function(category) { 
+    
     const title = category.firstElementChild;
 
     console.log (`Category: ${title.textContent}`);
