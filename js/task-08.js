@@ -2,6 +2,10 @@ const formEl = document.querySelector(".login-form");
 
 formEl.addEventListener ("submit", handleFormSubmit)
 
+const massage = { 
+
+}
+
 function handleFormSubmit(event) {
     event.preventDefault();
     const {
@@ -12,6 +16,10 @@ function handleFormSubmit(event) {
       return alert("Please fill in all the fields!");
     }
 
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
+    const massage = { 
+      Email: email.value, 
+      Password: password.value
+    }
+    console.log(massage);
   event.currentTarget.reset();
 }

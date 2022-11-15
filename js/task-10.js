@@ -17,7 +17,6 @@ function getAmount() {
 }
 
 function createBoxes(amount) {
-  console.log("Урааа")
   let baseSize = 30;
     for (let i = 0; i < amount; i+=1) {
         baseSize += 10
@@ -31,4 +30,16 @@ function createBoxes(amount) {
 
 function handleBtnDestroyBoxes() {
   boxes.innerHTML = "";
+}
+
+function createBoxes(amount) {
+  let baseSize = 30;
+    for (let i = 0; i < amount; i+=1) {
+        baseSize += 10
+        const newBox = document.createElement('div')
+        newBox.style.background = getRandomHexColor();
+        newBox.style.height = baseSize + 'px';
+        newBox.style.width = baseSize + 'px';
+        boxes.append(newBox)
+    }
 }
